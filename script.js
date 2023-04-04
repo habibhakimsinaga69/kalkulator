@@ -50,30 +50,19 @@ const calculate = () =>{
     let result = ''
     switch (calculationOperator) {
         case "+":
-            if (currentNumber==='') {
-                currentNumber='0'
-            }
             result = (parseFloat(prevNumber)*10 + parseFloat(currentNumber)*10)/10
             break
         case "-":
-            if (currentNumber==='') {
-                currentNumber='0'
-            }
             result = parseFloat(prevNumber) - parseFloat(currentNumber)
             break
         case "*":
-            if (currentNumber==='') {
-                currentNumber='1'
-            }
             result = parseFloat(prevNumber) * parseFloat(currentNumber)
             break
         case "/":
-            if (currentNumber==='') {
-                currentNumber='1'
-            }
             result = parseFloat(prevNumber) / parseFloat(currentNumber)
-        default:
             break
+        default:
+            return
     }
     currentNumber = result
     calculationOperator = ''
